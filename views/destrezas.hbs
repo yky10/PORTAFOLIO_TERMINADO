@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    {{> header}}
+
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: url('/images/play.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff; /* Cambiar el color del texto a blanco */
+        }
+
+        /* Fondo semi-transparente para mejorar la legibilidad */
+        .skills {
+            text-align: center;
+            padding: 20px;
+            margin-top: 80px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+            border-radius: 8px;
+        }
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .fila > * {
+            background-color: rgba(70, 69, 69, 0.9); /* Fondo negro translúcido */
+            color: #ffffff; /* Color del texto blanco */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .col h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #9633c4; /* Cambia #ffcc00 por el color que prefieras */
+        }
+
+
+        /* Estilos para gráficos circulares */
+        .skill-circle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .skill-circle span {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffffff; /* Color de las etiquetas en blanco */
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #4caf50 calc(var(--percentage) * 1%), #e0e0e0 0%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 1em;
+            font-weight: bold;
+            color: #ffffff; /* Color del texto blanco dentro del círculo */
+            animation: loadSkill 2s ease forwards;
+        }
+
+        .circle:before {
+            content: attr(data-percentage) '%';
+            position: absolute;
+        }
+
+        /* Animación para el porcentaje */
+        @keyframes loadSkill {
+            0% {
+                background: conic-gradient(
+                    #4caf50 0%, #e0e0e0 0%
+                );
+            }
+            100% {
+                background: conic-gradient(
+                    #a352ad calc(var(--percentage) * 1%), #e0e0e0 0%
+                );
+            }
+        }
+
+
+    </style>
+
+    <section class="skills" id="skills">
+        <h2>{{titulo}}</h2>
+        <div class="fila">
+            <!-- Habilidades técnicas -->
+            <div class="col">
+                <h3>Habilidades técnicas</h3>
+                <div class="skill-circle">
+                    <span>JavaScript</span>
+                    <div class="circle" data-percentage="55"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>HTML & CSS</span>
+                    <div class="circle" data-percentage="65"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>C++</span>
+                    <div class="circle" data-percentage="65"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>C#</span>
+                    <div class="circle" data-percentage="65"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>Java</span>
+                    <div class="circle" data-percentage="65"></div>
+                </div>
+            </div>
+            <!-- Habilidades profesionales -->
+            <div class="col">
+                <h3>Habilidades profesionales</h3>
+                <div class="skill-circle">
+                    <span>Comunicación</span>
+                    <div class="circle" data-percentage="80"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>Trabajo en equipo</span>
+                    <div class="circle" data-percentage="75"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>Creatividad</span>
+                    <div class="circle" data-percentage="90"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>Flexibilidad</span>
+                    <div class="circle" data-percentage="65"></div>
+                </div>
+                <div class="skill-circle">
+                    <span>Capacidad de adaptación</span>
+                    <div class="circle" data-percentage="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.circle').forEach(circle => {
+            const percentage = circle.getAttribute('data-percentage');
+            circle.style.setProperty('--percentage', percentage);
+        });
+    </script>
+
+</div>
+</div>
+    {{>footer}}
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

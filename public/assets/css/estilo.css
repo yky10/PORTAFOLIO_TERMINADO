@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/*HEADS,...................................................................................................................................................*/
+/* Cambiar el color de fondo del header */
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+header {
+    background-color: #1a1f1f7c; /* Un tono oscuro para el fondo */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF; /* Color blanco para el texto */
+    animation: fadeIn 1s ease-in-out; /* Animación al cargar el header */
+    position: fixed; /* Header fijo */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para el logo */
+.logo img {
+    width: 50px;
+    height: auto;
+    animation: slideInLeft 1s ease-in-out; /* Animación para el logo */
+}
+
+.logo-text {
+    color: #ffffff; /* Cambia #FF5733 por el color que prefieras */
+}
+
+/* Estilo para el menú de navegación */
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    animation: slideInRight 1s ease-in-out; /* Animación al cargar los enlaces */
+}
+
+/* Estilo para los botones de navegación */
+#nav ul li {
+    margin: 0 15px;
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-button {
+    color: #f5fafa; /* Color de los enlaces */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cambiar color del botón al pasar el ratón */
+.nav-button:hover {
+    background-color: #1717ca; /* Color de fondo al pasar el mouse */
+    border-radius: 5px;
+    transform: scale(1.1); /* Efecto de ampliación al pasar el ratón */
+}
+
+/* Animación al pulsar los botones */
+.nav-button:active {
+    transform: scale(0.9); /* Efecto de reducción al hacer clic */
+    transition: transform 0.1s ease; /* Transición rápida para simular "presionar" */
+}
+
+.nav-responsive {
+    display: none; /* Oculto por defecto */
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+    .nav-responsive.active + #nav ul {
+        display: flex;
+        animation: slideDown 0.5s ease-in-out; /* Animación para desplegar el menú */
+    }
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* SECCION INICIO */
+.inicio {
+    background: url(/images/fondo.jpg) no-repeat center center/cover; /* Asegúrate de ajustar la ruta */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
+
+
+.foto-perfil {
+    width: 150px; /* Ajusta el ancho como prefieras */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-top: 20px; /* Espaciado superior */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para la imagen */
+}
+
+.contenido-inicio {
+    padding: 40px;
+    background: rgba(16, 17, 16, 0.6); /* Fondo semi-transparente oscuro */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.texto-intro h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.texto-intro h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #1CB698;
+    margin-top: 10px;
+}
+
+.texto-intro p {
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: 400;
+    color: #fff;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.redes a {
+    color: #1CB698;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.redes a:hover {
+    color: #ab1919;
+}
+
+
+/* ANIMACIONES */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contenedor-header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.col {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.interes {
+    background: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.interes:hover {
+    background: #ddd;
+    transform: translateY(-3px);
+}
+
+.descargar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.descargar:hover {
+    background-color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* SECCION HABILIDADES */
+.skill-circle {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.skill-circle span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 calc(var(--percentage) * 1%), #e0e0e0 0%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.circle:before {
+    content: attr(data-percentage) '%';
+    position: absolute;
+}
+
+
+
+
+/* SECCION PYOYECTOS */
+/* Galería de Proyectos */
+.proyectos {
+    background-color: #252A2E;
+    color: #09bdba;
+    padding: 50px 20px;
+    background-image: url('/images/FONDOTECLADO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.proyectos .contenido-seccion {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.proyectos h2 {
+    font-size: 48px;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 40px;
+    color: #09bdba;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.proyecto {
+    position: relative;
+    max-width: 300px;
+    margin: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.proyecto img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 10, 57, 0.489);
+    color: #ece5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.proyecto:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Sección de Video */
+.video-seccion {
+    background-color: #056ace25;    
+    padding: 50px 20px;
+    color: #19123e89;
+    text-align: center;
+}
+
+.video-seccion h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #09bdba;
+}
+
+
+
+iframe {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* SECCION CONTACTO -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 60px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: url('/images/control.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.contacto .contenido-seccion {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #13ca3b;
+    animation: fadeInDown 1s ease;
+}
+
+.contacto .fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    animation: fadeInUp 1s ease;
+}
+
+.contacto .col {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .input-animado {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #13ca3b;
+    border-radius: 5px;
+    background: #252A2E;
+    color: #0ac27b;
+    font-size: 16px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto .input-animado:focus {
+    border-color: #1CB698;
+    outline: none;
+    transform: translateY(-3px);
+}
+
+.contacto .btn-animado {
+    background-color: #1CB698;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contacto .btn-animado .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #13ca3b;
+    transition: height 0.4s ease;
+    z-index: -1;
+}
+
+.contacto .btn-animado:hover .overlay {
+    height: 100%;
+}
+
+.contacto .btn-animado:hover {
+    transform: translateY(-5px);
+}
+
+.contacto .mapa-animado {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contacto .mapa-animado:hover {
+    transform: scale(1.05);
+}
+
+.contacto .info {
+    background-color: #252A2E;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.contacto .info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto .info ul li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto .info ul li i {
+    color: #1CB698;
+    margin-right: 10px;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background: #0e0e0e;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer .redes a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .redes a:hover {
+    color: #13ca3b;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**----------------------------------------------------/
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+    .proyectos .galeria{
+        display: block;
+        width: 100%;
+    }
+    .proyectos .galeria .proyecto{
+        max-width: 100%;
+    }
+    .proyectos .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+
+}
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
